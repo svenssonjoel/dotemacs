@@ -1,4 +1,5 @@
 
+
 ;; ------------------------------------------------------------
 ;; Melpa
 (require 'package)
@@ -28,10 +29,14 @@
 
 (run-with-idle-timer 0.1 nil 'toggle-frame-fullscreen)
 
-
 ;; ------------------------------------------------------------
 ;; Aux
 (setq visible-bell t) ;; Turn off audible bell
+
+;; ------------------------------------------------------------
+;; hooks
+(require 'highlight-parentheses)
+(add-hook 'emacs-lisp-mode-hook 'highlight-parentheses-mode)
 
 
 ;; ------------------------------------------------------------
@@ -47,6 +52,7 @@
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes (quote (deeper-blue)))
  '(inhibit-startup-screen t)
+ '(package-selected-packages (quote (highlight-parentheses)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
