@@ -31,8 +31,9 @@
 
 ;; ------------------------------------------------------------
 ;; Aux
-(setq visible-bell t) ;; Turn off audible bell
+(setq visible-bell t)		;; Turn off audible bell
 (set-default 'truncate-lines t) ;; Truncate lines by default in all buffers
+(setq debug-on-error t)	     	;; Debug on error by default
 
 ;; ------------------------------------------------------------
 ;; hooks
